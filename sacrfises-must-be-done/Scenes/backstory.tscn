@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://3hy5asnf88hc"]
+
+[ext_resource type="FontFile" uid="uid://chshldxs6423b" path="res://DeterminationMonoWebRegular-Z5oq.ttf" id="1_ajky3"]
+[ext_resource type="Script" uid="uid://cnbodttgf1kwh" path="res://Scenes/button.gd" id="2_1n2c4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4k0gl"]
+font = ExtResource("1_ajky3")
+font_size = 44
+font_color = Color(0, 0, 0, 1)
+
+[node name="Backstory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 1155.0
+offset_bottom = 652.0
+color = Color(0.62352943, 0.54901963, 0.4627451, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 35.0
+offset_right = 1141.0
+offset_bottom = 522.0
+text = "Once, there were two crochet teddy bears.
+One day, the younger bear slipped into a water cup,
+ struggling to stay afloat. His brother,
+helpless on the shore, knew what he had to do.
+With courage stitched into every thread,
+he pulled a string from his own body,
+ tied it to a nail, and reached out.
+
+Your mission is to rescue the brother
+preventing him from drowning."
+label_settings = SubResource("LabelSettings_4k0gl")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 546.0
+offset_right = 686.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("1_ajky3")
+theme_override_font_sizes/font_size = 44
+text = "Let's Go"
+autowrap_mode = 3
+script = ExtResource("2_1n2c4")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
