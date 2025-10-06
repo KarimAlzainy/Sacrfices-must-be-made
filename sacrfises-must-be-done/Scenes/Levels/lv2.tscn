@@ -1,0 +1,422 @@
+[gd_scene load_steps=21 format=3 uid="uid://dka2uh6016en"]
+
+[ext_resource type="Script" uid="uid://cd2rjq4y2j100" path="res://Assets/Scripts/movementlv2.gd" id="2_g1h5x"]
+[ext_resource type="AudioStream" uid="uid://c4ymt6os7ao4g" path="res://Assets/Music/main theme.wav" id="11_k6hia"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_24r4j"]
+load_path = "res://.godot/imported/lvl2bg.jpg-7b2087b628e7463dbabf0284f6ec69cc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lh6qi"]
+load_path = "res://.godot/imported/18fd42cf-b35e-4a5a-a8b0-a0c1546e3a14-removebg-preview.png-2876db654910fcbbc925c25807777c3b.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6hia"]
+size = Vector2(50, 40)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lhbsc"]
+load_path = "res://.godot/imported/door.png-0af49faf04ba792717bd74bf2b2bc72e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge7mr"]
+size = Vector2(67.5, 137)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpw0l"]
+size = Vector2(112, 69)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rpw0l"]
+load_path = "res://.godot/imported/woodtexture.png-7afe08cd0ed46374e75d2ccbb061266a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g1h5x"]
+load_path = "res://.godot/imported/tvremote.png-3a2fcbdad73ad731ebef43724302fb8c.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k6hia"]
+radius = 35.0
+height = 264.0
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_hq6mr"]
+points = PackedVector2Array(1, 36, 23, 38, 11, 2)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_27dvi"]
+load_path = "res://.godot/imported/spikes-removebg-preview.png-317f08a45f66870e0389fb0e233f9ca4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sgx70"]
+load_path = "res://.godot/imported/danger.png-84877f254031207900c12c63bbfcd05d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ge7mr"]
+load_path = "res://.godot/imported/brokenlamp.png-947a22925d846b5aee82e877a24b5c85.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ge7mr"]
+radius = 34.058773
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hq6mr"]
+radius = 17.081787
+height = 36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgx70"]
+size = Vector2(8, 820.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq6mr"]
+size = Vector2(74, 20)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hq6mr"]
+load_path = "res://.godot/imported/toys.png-056ac219aa2d03037ecb52eb4f503af0.ctex"
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-2, -257)
+metadata/_edit_vertical_guides_ = [-201.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1073.0001, 455.37497)
+scale = Vector2(1.6730033, 1.7456394)
+texture = SubResource("CompressedTexture2D_24r4j")
+
+[node name="dino" type="CharacterBody2D" parent="."]
+position = Vector2(64, 4)
+script = ExtResource("2_g1h5x")
+
+[node name="ColorRect2" type="ColorRect" parent="dino"]
+offset_left = -1607.0
+offset_top = 795.0
+offset_right = 57.0
+offset_bottom = 802.0
+color = Color(0.23437274, 0.4414269, 0.17012233, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="dino"]
+position = Vector2(57.796875, 782.48694)
+scale = Vector2(0.2991875, 0.2739479)
+texture = SubResource("CompressedTexture2D_lh6qi")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="dino"]
+position = Vector2(66, 803)
+shape = SubResource("RectangleShape2D_k6hia")
+
+[node name="Camera2D" type="Camera2D" parent="dino"]
+position = Vector2(-10, 718)
+zoom = Vector2(1.2, 1.2)
+limit_left = 0
+limit_top = -100
+limit_right = 2145
+limit_bottom = 645
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="door" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="door"]
+position = Vector2(2107.0002, 777)
+scale = Vector2(1.3, 1.3)
+texture = SubResource("CompressedTexture2D_lhbsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(2106.75, 763.5)
+shape = SubResource("RectangleShape2D_ge7mr")
+
+[node name="ground" type="CharacterBody2D" parent="."]
+position = Vector2(-7, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+position = Vector2(60.74873, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D10" type="Sprite2D" parent="ground"]
+position = Vector2(60.748734, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ground"]
+position = Vector2(168.74872, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D11" type="Sprite2D" parent="ground"]
+position = Vector2(168.74873, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ground"]
+position = Vector2(280.74872, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D12" type="Sprite2D" parent="ground"]
+position = Vector2(278, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ground"]
+position = Vector2(388.74872, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D13" type="Sprite2D" parent="ground"]
+position = Vector2(388.74872, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="ground"]
+position = Vector2(498.74872, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D14" type="Sprite2D" parent="ground"]
+position = Vector2(498.74872, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="ground"]
+position = Vector2(606.7487, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D15" type="Sprite2D" parent="ground"]
+position = Vector2(606.7487, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="ground"]
+position = Vector2(718.7487, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D16" type="Sprite2D" parent="ground"]
+position = Vector2(716, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="ground"]
+position = Vector2(826.7487, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D17" type="Sprite2D" parent="ground"]
+position = Vector2(826.7487, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="ground"]
+position = Vector2(935.7487, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D18" type="Sprite2D" parent="ground"]
+position = Vector2(935.7487, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="ground"]
+position = Vector2(1043.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D19" type="Sprite2D" parent="ground"]
+position = Vector2(1043.7488, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="ground"]
+position = Vector2(1155.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D20" type="Sprite2D" parent="ground"]
+position = Vector2(1153, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="ground"]
+position = Vector2(1263.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D21" type="Sprite2D" parent="ground"]
+position = Vector2(1263.7488, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="ground"]
+position = Vector2(1373.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D22" type="Sprite2D" parent="ground"]
+position = Vector2(1373.7488, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="ground"]
+position = Vector2(1481.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D23" type="Sprite2D" parent="ground"]
+position = Vector2(1481.7488, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="ground"]
+position = Vector2(1593.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D24" type="Sprite2D" parent="ground"]
+position = Vector2(1591, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="ground"]
+position = Vector2(1701.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D25" type="Sprite2D" parent="ground"]
+position = Vector2(1701.7488, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="ground"]
+position = Vector2(1812.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D26" type="Sprite2D" parent="ground"]
+position = Vector2(1812.7488, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="ground"]
+position = Vector2(1920.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D27" type="Sprite2D" parent="ground"]
+position = Vector2(1920.7488, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="ground"]
+position = Vector2(2032.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D28" type="Sprite2D" parent="ground"]
+position = Vector2(2030, 867.00006)
+scale = Vector2(0.108884245, 0.084507026)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="ground"]
+position = Vector2(2140.7488, 861.9809)
+shape = SubResource("RectangleShape2D_rpw0l")
+
+[node name="Sprite2D29" type="Sprite2D" parent="ground"]
+position = Vector2(2140.7488, 867)
+scale = Vector2(0.108884245, 0.08450704)
+texture = SubResource("CompressedTexture2D_rpw0l")
+
+[node name="remote" type="CharacterBody2D" parent="."]
+position = Vector2(-95, 560)
+
+[node name="Sprite2D" type="Sprite2D" parent="remote"]
+position = Vector2(577, 234)
+rotation = 0.37699112
+texture = SubResource("CompressedTexture2D_g1h5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="remote"]
+position = Vector2(572, 238)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_k6hia")
+
+[node name="spikes" type="CharacterBody2D" parent="."]
+position = Vector2(459, 410)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="spikes"]
+position = Vector2(862, 785.77765)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("ConvexPolygonShape2D_hq6mr")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="spikes"]
+position = Vector2(905.99994, 785.77765)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("ConvexPolygonShape2D_hq6mr")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="spikes"]
+position = Vector2(948.00006, 787.77765)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("ConvexPolygonShape2D_hq6mr")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="spikes"]
+position = Vector2(1386, 787.02765)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("ConvexPolygonShape2D_hq6mr")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="spikes"]
+position = Vector2(1429.9999, 787.02765)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("ConvexPolygonShape2D_hq6mr")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="spikes"]
+position = Vector2(1472, 789.02765)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("ConvexPolygonShape2D_hq6mr")
+
+[node name="Sprite2D" type="Sprite2D" parent="spikes"]
+position = Vector2(920, 808.7777)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_27dvi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="spikes"]
+position = Vector2(1446, 807.0277)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_27dvi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="spikes"]
+position = Vector2(917.99994, 757.55554)
+scale = Vector2(0.22222224, 0.22222224)
+texture = SubResource("CompressedTexture2D_sgx70")
+
+[node name="brokenlamp" type="CharacterBody2D" parent="."]
+position = Vector2(675, 502)
+scale = Vector2(0.38, 0.38)
+
+[node name="Sprite2D" type="Sprite2D" parent="brokenlamp"]
+position = Vector2(-110.6037, 843.75793)
+rotation = -1.3159783
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_ge7mr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="brokenlamp"]
+position = Vector2(-115.57904, 776.3158)
+scale = Vector2(0.2, 0.2)
+texture = SubResource("CompressedTexture2D_sgx70")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenlamp"]
+position = Vector2(-125.57892, 840.3159)
+shape = SubResource("CircleShape2D_ge7mr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="brokenlamp"]
+position = Vector2(-77.5788, 852.31573)
+rotation = -1.1850786
+shape = SubResource("CapsuleShape2D_hq6mr")
+
+[node name="block" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block"]
+position = Vector2(8, 419.25)
+shape = SubResource("RectangleShape2D_sgx70")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="block"]
+position = Vector2(2148, 419)
+shape = SubResource("RectangleShape2D_sgx70")
+
+[node name="toys" type="CharacterBody2D" parent="."]
+position = Vector2(129, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toys"]
+position = Vector2(1310, 820)
+shape = SubResource("RectangleShape2D_hq6mr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="toys"]
+position = Vector2(1648.775, 821.525)
+shape = SubResource("RectangleShape2D_hq6mr")
+
+[node name="Sprite2D" type="Sprite2D" parent="toys"]
+position = Vector2(1303.775, 818.525)
+scale = Vector2(0.364008, 0.49042737)
+texture = SubResource("CompressedTexture2D_hq6mr")
+vframes = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="toys"]
+position = Vector2(1641.775, 821.525)
+scale = Vector2(0.364008, 0.49042737)
+texture = SubResource("CompressedTexture2D_hq6mr")
+vframes = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="toys"]
+position = Vector2(1311, 804)
+scale = Vector2(0.076, 0.076)
+texture = SubResource("CompressedTexture2D_sgx70")
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_k6hia")
+autoplay = true
+max_polyphony = 20

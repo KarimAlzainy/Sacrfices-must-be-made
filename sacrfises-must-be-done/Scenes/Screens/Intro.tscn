@@ -1,0 +1,212 @@
+[gd_scene load_steps=12 format=3 uid="uid://3hy5asnf88hc"]
+
+[ext_resource type="Script" uid="uid://bgbnw880ycmr0" path="res://Scenes/Screens/intro.gd" id="1_1g85a"]
+[ext_resource type="FontFile" uid="uid://chshldxs6423b" path="res://Assets/DeterminationMonoWebRegular-Z5oq.ttf" id="1_ehav7"]
+[ext_resource type="Script" uid="uid://cnbodttgf1kwh" path="res://Assets/Scripts/button.gd" id="2_1g85a"]
+[ext_resource type="Texture2D" uid="uid://dcnfnuvaavvos" path="res://Assets/Imgs/intro1.png" id="4_ogmdy"]
+[ext_resource type="AudioStream" uid="uid://tjlye062o2d1" path="res://Assets/Music/inro.wav" id="4_shr6h"]
+[ext_resource type="Texture2D" uid="uid://bk3y4qaqwxge1" path="res://Assets/Imgs/intro2.png" id="5_cfu70"]
+[ext_resource type="Texture2D" uid="uid://d0fkh78ggjuru" path="res://Assets/Imgs/intro3.png" id="6_aoxk3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_shr6h"]
+font = ExtResource("1_ehav7")
+font_size = 44
+
+[sub_resource type="Animation" id="Animation_056qx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Once, there were two crochet teddy bears."]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_ogmdy")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_a5013"]
+resource_name = "textAnimation"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.81, 3.2, 3.2099998, 6.076667, 8.6, 8.610001, 11.433333, 12.8, 12.81, 15.799999, 17.1, 17.11, 18.26348, 20.089998, 20.1, 21.443438, 26.566668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.81, 3.2099998, 8.610001, 12.88857, 17.140667, 21.056454),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Once, there were two crochet teddy bears.", "One day, the younger bear slipped into a water cup,
+struggling to stay afloat.", "His brother,
+helpless on the shore, knew what he had to do.", "With courage stitched into every thread,
+he pulled a string from his own body,", "tied it to a nail, and reached out.
+", "Your mission is to rescue the brother
+preventing him from drowning."]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(27.612574, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.8698366, 14.662381),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_ogmdy"), ExtResource("5_cfu70"), ExtResource("6_aoxk3")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 21.241102, 21.413095),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ogmdy"]
+_data = {
+&"RESET": SubResource("Animation_056qx"),
+&"textAnimation": SubResource("Animation_a5013")
+}
+
+[node name="Backstory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1g85a")
+metadata/_edit_vertical_guides_ = [-200.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 420.0
+offset_right = 1137.0
+offset_bottom = 562.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Once, there were two crochet teddy bears."
+label_settings = SubResource("LabelSettings_shr6h")
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 993.0
+offset_top = 575.0
+offset_right = 1104.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("1_ehav7")
+theme_override_font_sizes/font_size = 44
+text = "Skip"
+autowrap_mode = 3
+script = ExtResource("2_1g85a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ogmdy")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_shr6h")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(566, 215)
+scale = Vector2(0.4158253, 0.40201366)
+texture = ExtResource("4_ogmdy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]

@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmf4i0683tab0"]
+
+[ext_resource type="Texture2D" uid="uid://woc3sanqyco3" path="res://Assets/Imgs/cupFinal.png" id="1_dobq4"]
+[ext_resource type="Script" uid="uid://dveoxpsdeifal" path="res://Scenes/Levels/movement3.gd" id="2_djmtn"]
+[ext_resource type="AudioStream" uid="uid://cddr8c2edq4lt" path="res://Assets/Music/wind sound.mp3" id="3_djmtn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v33rr"]
+size = Vector2(405.25, 235)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3w4bw"]
+load_path = "res://.godot/imported/dino.png-56b63057a0b94214fa3aa527e9a4cf28.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byq2l"]
+size = Vector2(51.00058, 27.965443)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8egk8"]
+size = Vector2(4287.5313, 176.66647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvle0"]
+size = Vector2(109.5, 1094.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxpql"]
+size = Vector2(198, 120)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1660.0
+offset_top = -14.0
+offset_right = 2797.0
+offset_bottom = 738.0
+color = Color(0.13764194, 0.015576206, 0.15305987, 1)
+
+[node name="door" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(2630.375, 319)
+shape = SubResource("RectangleShape2D_v33rr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="door"]
+position = Vector2(2499, 390.99997)
+scale = Vector2(0.45000038, 0.39700004)
+texture = ExtResource("1_dobq4")
+
+[node name="spike" type="StaticBody2D" parent="."]
+
+[node name="dino" type="CharacterBody2D" parent="."]
+script = ExtResource("2_djmtn")
+
+[node name="ColorRect2" type="ColorRect" parent="dino"]
+offset_left = -4554.0
+offset_top = 346.0
+offset_right = -1497.0
+offset_bottom = 353.0
+color = Color(0.23437274, 0.4414269, 0.17012233, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="dino"]
+position = Vector2(-1500.1847, 330.94662)
+scale = Vector2(0.3792613, 0.3157865)
+texture = SubResource("CompressedTexture2D_3w4bw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dino"]
+position = Vector2(-1504, 353.0001)
+scale = Vector2(1.9511927, 1.6806465)
+shape = SubResource("RectangleShape2D_byq2l")
+
+[node name="Camera2D" type="Camera2D" parent="dino"]
+position = Vector2(-1332, 596)
+limit_left = -1650
+limit_top = 0
+limit_right = 2780
+limit_bottom = 655
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(537, 537.2076)
+scale = Vector2(1.0546862, 1.2363133)
+shape = SubResource("RectangleShape2D_8egk8")
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -1710.0
+offset_top = 433.0
+offset_right = 2797.0
+offset_bottom = 963.0
+color = Color(0, 0, 0, 1)
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-1706, 266)
+shape = SubResource("RectangleShape2D_fvle0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2(78, 421)
+shape = SubResource("RectangleShape2D_dxpql")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2(221, 376)
+shape = SubResource("RectangleShape2D_dxpql")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Borders"]
+position = Vector2(339, 421)
+shape = SubResource("RectangleShape2D_dxpql")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(2851, 399)
+shape = SubResource("RectangleShape2D_fvle0")
+
+[node name="ColorRect2" type="ColorRect" parent="Borders"]
+offset_left = -16.0
+offset_top = 363.0
+offset_right = 13102.951
+offset_bottom = 893.0
+scale = Vector2(0.034377746, 0.3003363)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Borders"]
+offset_left = 124.0
+offset_top = 319.0
+offset_right = 5854.451
+offset_bottom = 995.50244
+scale = Vector2(0.034377746, 0.3003363)
+color = Color(0, 0, 0, 1)
+
+[node name="WindSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_djmtn")
+autoplay = true
+max_polyphony = 11
